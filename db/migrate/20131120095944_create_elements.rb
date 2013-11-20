@@ -2,7 +2,7 @@ class CreateElements < ActiveRecord::Migration
   def change
     create_table :elements do |t|
       t.string :name
-      t.string :symbl
+      t.string :symbol
       t.integer :number
       t.float :weight
 
