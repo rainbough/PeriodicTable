@@ -1,4 +1,4 @@
-<header><div class="title"></div>
+<header><div class="title"></div><%= link_to "Elements", elements_path %>
 		</header>
 		
 		<div class="container">
@@ -256,16 +256,16 @@
 					<div>Lr</div>
 				  
 			</section>
+			
 		</div>
 	</div>
+
 <script>
 	$(document).ready(function(){
 	$('section div').on('click', function(){
 		var element = $(this).text();
 		$('#hidden').addClass('top_add');
 		$('#hidden').text(element);
-		console.log(element);
-		var page = $(this).get("/elements/#{element}");
 		});
 
 	});
