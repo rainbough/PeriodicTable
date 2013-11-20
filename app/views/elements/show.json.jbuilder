@@ -1,1 +1,1 @@
-json.extract! @element, :name, :symbol, :number, :weight, :created_at, :updated_at
+json.extract! @element, :name, :symbl, :number, :weight, :created_at, :updated_at
