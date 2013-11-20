@@ -20,5 +20,14 @@
   <%= @element.weight %>
 </p>
 
+<p>
+	<strong>Wiki:</strong>
+	<%= @wikipage.paragraphs(2).each do |x| %>
+		<%= puts x %>
+	<% end %>
+
+
+</p>
+
 <%= link_to 'Edit', edit_element_path(@element) %> |
 <%= link_to 'Back', elements_path %>

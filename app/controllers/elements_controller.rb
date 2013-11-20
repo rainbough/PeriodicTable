@@ -10,6 +10,7 @@ class ElementsController < ApplicationController
   # GET /elements/1
   # GET /elements/1.json
   def show
+    @wikipage = Wikiwhat::Page.new("#{@element.name}")
   end
 
   # GET /elements/new
