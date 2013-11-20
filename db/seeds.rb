@@ -6,4 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Element.create([{name: 'Hydrogen', number: 1 , symbol: "H" }, {name: 'Helium', number: 2, symbol: 'He'}])
+Element.create([{name: 'Hydrogen', number: 1 , symbl: "H" }, {name: 'Helium', number: 2, symbl: 'He'}])

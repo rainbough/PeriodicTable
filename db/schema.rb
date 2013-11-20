@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20131120095944) do
 
   create_table "elements", force: true do |t|
     t.string   "name"
-    t.string   "symbol"
+    t.string   "symbl"
     t.integer  "number"
     t.float    "weight"
     t.datetime "created_at"
