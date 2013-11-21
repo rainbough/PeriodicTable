@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131120095944) do
+ActiveRecord::Schema.define(version: 20131121002155) do
 
   create_table "elements", force: true do |t|
     t.string   "name"
     t.string   "symbl"
-    t.integer  "number"
     t.float    "weight"
+    t.integer  "number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

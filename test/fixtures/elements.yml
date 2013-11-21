@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  symbol: MyString
-  number: 1
+  symbl: MyString
   weight: 1.5
+  number: 1
 
 two:
   name: MyString
-  symbol: MyString
-  number: 1
+  symbl: MyString
   weight: 1.5
+  number: 1

@@ -3,8 +3,8 @@ class CreateElements < ActiveRecord::Migration
     create_table :elements do |t|
       t.string :name
       t.string :symbl
-      t.integer :number
       t.float :weight
+      t.integer :number
 
       t.timestamps
     end
