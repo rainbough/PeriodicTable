@@ -1,5 +1,5 @@
 class ElementsController < ApplicationController
-  before_action :set_element, only: [:show, :edit, :update, :destroy]
+  before_action :set_element, only: [ :wiki, :show, :edit, :update, :destroy]
 
   # GET /elements
   # GET /elements.json
@@ -10,10 +10,12 @@ class ElementsController < ApplicationController
   # GET /elements/1
   # GET /elements/1.json
   def show
-    @wikipage = Wikiwhat::Page.new("#{@element.name}")
-
+    
   end
 
+  def wiki
+    @wikipage = Wikiwhat::Page.new("#{@element.name}")
+  end
   # GET /elements/new
   def new
     @element = Element.new
@@ -67,6 +69,10 @@ class ElementsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_element
       @element = Element.find(params[:id])
+    end
+
+    def get_symbol
+      @element = Element.find_by(params[:symbl])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

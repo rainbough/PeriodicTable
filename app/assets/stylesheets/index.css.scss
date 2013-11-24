@@ -1,14 +1,31 @@
 // Place all the styles related to the index controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-
+.chemical_data{
+	float: left;
+}
+.center{
+	margin: 0 auto 0 auto;
+	display: block;
+}
+.result_box{
+	width: 700px;
+	float: left;
+	display: block;
+	margin: 0 0 0 210px;
+}
+.result{
+	width: 100%;
+	
+}
 
 body{
 	background-color: #fff;
 
-	
+}
+
+a {
+	text-decoration: none;
 }
 /* sets withd for entire periodic table - smaller widths will bump the far right columns down*/
 .container{
@@ -158,21 +175,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', end
 	color: #000;
 	height: 100px;
 	width: 100px;
-	margin: 10px 0 0 200px;
+	margin: 10px 0 0 0;
 	text-align: center;
 	font-size: 40px;
+	float:left;
 
 }
 
-#hidden.top_add p{
-	margin: 20px 0 0 0;
-
+#hidden{
+	margin: 10px;
 }
 
 .top_display{
-	border: 2px solid #222;
 	border-radius: 5px;
-	height: 180px;
-	width: 540px;
-	margin: 0 0 0 110px;
+	height: 170px;
+	width: 500px;
+	margin: 10px 0 0 130px;
+	box-shadow: inset 2px 2px 3px #222;
+	padding: 5px;
+
 }

@@ -1,0 +1,17 @@
+<div>
+	<strong>Wiki:</strong>
+	<% @wikipage.paragraphs(5).each do |paragraph| %>
+    <%= paragraph.html_safe %>
+  <% end %>
+  <%= link_to "Read entire Wikipedia Article", "http://www.wikipedia.com/wiki/#{@element.name}"%>
+  <%# image_list = @wikipage.image_list %>
+      
+  <%# urls = image_list[:urls] %>
+  <%# titles = image_list[:titles] %>
+  <%# i = 0 %>
+  <%# urls.each do |x| %>
+    <%#= image_tag(x, style: 'height: 150px; width: auto;') %>
+    <%# i+=1 %>
+  <%# end %>
+</div>
+

@@ -1,11 +1,11 @@
 <header><div class="title"></div><%= link_to "Elements", elements_path %>
 		</header>
-		
+		<div class="center">
 		<div class="container">
 			<section class="alkali">
 				  
-					<div>H</div>
-					<div>Li</div>
+					<div name="1">H</div>
+					<div name="3">Li</div>
 					<div>K</div>
 					<div>Na</div>
 					<div>Rb</div>
@@ -28,7 +28,8 @@
 			<div class="tm_box">
 				<div class="top_display">
 					<div id="hidden">
-						<p></p>
+					</div>
+					<div class="chemical_data">
 					</div>
 				</div>
 				<section class="tm" id="sc">
@@ -151,7 +152,7 @@
 			</section>
 				<section class="ng" id="he">
 				  
-					<div>He</div>
+					<div name="2">He</div>
 					<div>Ne</div>
 					<div>Ar</div>
 					<div>Kr</div>
@@ -252,20 +253,33 @@
 			</section>
 			<section class ="re">
 				  
-					<div>Lu</div>
-					<div>Lr</div>
+					<div><a href="#Lu">Lu</a></div>
+					<div><a href="#Lr">Lr</a></div>
 				  
 			</section>
 			
 		</div>
 	</div>
+</div>
+	<div class="empty"></div>
+	<div class="result_box">
+		<div class="result"></div>
+	</div>
 
 <script>
 	$(document).ready(function(){
 	$('section div').on('click', function(){
-		var element = $(this).text();
+		var number = $(this).attr('name');
+		var symbol = $(this).text();
 		$('#hidden').addClass('top_add');
-		$('#hidden').text(element);
+		$('#hidden').text(symbol);
+		var element = $.get( "/elements/" + number, function(e) {
+  		$( ".chemical_data" ).html(e);
+  		
+		});
+		$.get("/elements/" + number + "/wiki", function(e){
+			$('.result').html(e).slideDown();
+		});
 		});
 
 	});

@@ -19,25 +19,3 @@
   <strong>Weight:</strong>
   <%= @element.weight %>
 </p>
-
-<div>
-	<strong>Wiki:</strong>
-	<% @wikipage.paragraphs(2).each do |paragraph| %>
-    <%= paragraph.html_safe %>
-  <% end %>
-  <% image_list = @wikipage.image_list %>
-      
-  <% urls = image_list[:urls] %>
-  <% titles = image_list[:titles] %>
-  <% i = 0 %>
-  <% urls.each do |x| %>
-    <%= image_tag(x, style: 'height: 150px; width: auto;') %>
-    <% i+=1 %>
-  <% end %>
-
-
-</div>
-
-
-<%= link_to 'Edit', edit_element_path(@element) %> |
-<%= link_to 'Back', elements_path %>
