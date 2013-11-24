@@ -8,10 +8,13 @@
 
 Element.create([
 
-	{name: 'Hydrogen', number: 1 , symbl: "H" },
-	 {name: 'Helium', number: 2, symbl: 'He'},
-	 {name: 'Lithium', number: 3, symbl: 'Li'},
-	 {name: 'Beryllium', number: 4, symbl: 'Be' },
-	 {name: 'Boron', number: 5, symbl: 'B'}
+	{name: 'Hydrogen', number: 1 , symbl: "H", weight: 1.008},
+	 {name: 'Helium', number: 2, symbl: 'He', weight: 4.003 },
+	 {name: 'Lithium', number: 3, symbl: 'Li', weight: 6.94},
+	 {name: 'Beryllium', number: 4, symbl: 'Be', weight: 9.012 },
+	 {name: 'Boron', number: 5, symbl: 'B', weight: 10.81 },
+	 {name: 'Carbon', number: 6, symbl: 'C', weight: 12.011 },
+	 {name: 'Nitrogen', number: 7, symbl: 'N', weight: 14.007 },
+	 {name: 'Oxygen', number: 8, symbl: 'O', weight: 15.999 }
 
 	 ])
