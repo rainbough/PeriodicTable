@@ -9,13 +9,18 @@
 	display: block;
 }
 .result_box{
-	width: 700px;
+	width: 780px;
 	float: left;
 	display: block;
-	margin: 0 0 0 210px;
+	margin: 20px 0 0 210px;
+	padding: 20px;
+	box-shadow: 2px 2px 4px #222;
+	background-color: #e8e8e8;
+	border-radius: 10px;
 }
 .result{
 	width: 100%;
+	
 	
 }
 
@@ -191,7 +196,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', end
 	height: 170px;
 	width: 500px;
 	margin: 10px 0 0 130px;
-	box-shadow: inset 2px 2px 3px #222;
+	box-shadow: inset 2px 2px 4px #222;
 	padding: 5px;
 
 }
