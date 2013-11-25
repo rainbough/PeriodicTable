@@ -1,6 +1,6 @@
 class ElementsController < ApplicationController
   before_action :set_element, only: [ :wiki, :show, :edit, :update, :destroy]
-
+  before_action :get_wiki, only: [:wiki]
   # GET /elements
   # GET /elements.json
   def index
@@ -14,7 +14,7 @@ class ElementsController < ApplicationController
   end
 
   def wiki
-    @wikipage = Wikiwhat::Page.new("#{@element.name}")
+
   end
   # GET /elements/new
   def new
@@ -71,8 +71,8 @@ class ElementsController < ApplicationController
       @element = Element.find(params[:id])
     end
 
-    def get_symbol
-      @element = Element.find_by(params[:symbl])
+    def get_wiki
+      @wikipage = Wikiwhat::Page.new("#{@element.name}")
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

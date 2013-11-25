@@ -1,8 +1,11 @@
 <div>
-	<strong>Wiki:</strong>
-	<% @wikipage.paragraphs(5).each do |paragraph| %>
-    <%= paragraph.html_safe %>
-  <% end %>
+	Via <strong>Wikipedia:</strong>
+  <%= puts @wikipage.class %>
+    <% @wikipage.paragraphs(5).each do |paragraph| %>
+      <%= paragraph.html_safe %>
+    <% end %>
+
+  
   <%= link_to "Read entire Wikipedia Article", "http://www.wikipedia.com/wiki/#{@element.name}"%>
   <%# image_list = @wikipage.image_list %>
       
