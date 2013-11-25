@@ -14,6 +14,9 @@ class ElementsController < ApplicationController
   end
 
   def wiki
+    if @element.name == "Mercury"
+      @wikipage = Wikiwhat::Page.new("#{@element.name}_(element)")
+    end
 
   end
   # GET /elements/new

@@ -1,9 +1,8 @@
-<header><div class="title"></div>
-		</header>
+<%= render 'layouts/navbar' %>
+<div class="page-wrap">
 		<div class="center">
-		<div class="container">
-			<section class="alkali">
-				  
+			<div class="container">
+				<section class="alkali">
 					<div name="1">H</div>
 					<div name="3">Li</div>
 					<div name="11">Na</div>
@@ -11,23 +10,21 @@
 					<div name="37">Rb</div>
 					<div name="55">Cs</div>
 					<div name="87">Fr</div>
-				  
-				
-			</section>
+				</section>
 			<section class="be" id="be">
-				
-					<div name="4">Be</div>
-					<div name="12">Mg</div>
-					<div name="20">Ca</div>
-					<div name="38">Sr</div>
-					<div name="56">Ba</div>
-					<div name="88">Ra</div>
+				<div name="4">Be</div>
+				<div name="12">Mg</div>
+				<div name="20">Ca</div>
+				<div name="38">Sr</div>
+				<div name="56">Ba</div>
+				<div name="88">Ra</div>
 					
 				  
 			</section>
 			<div class="tm_box">
 				<div class="top_display">
 					<div id="hidden">
+						<h3>Periodic Table on Rails</h3>
 					</div>
 					<div class="chemical_data">
 					</div>
@@ -266,12 +263,18 @@
 		<div class="result"></div>
 	</div>
 
+  
+ 
+      
+</div>
+
+<%= render 'layouts/footer' %>
 <script>
 	$(document).ready(function(){
 	$('section div').on('click', function(){
 		var number = $(this).attr('name');
 		var symbol = $(this).text();
-		$('#hidden').addClass('top_add');
+		$('#hidden').empty().addClass('top_add');
 		$('#hidden').html('<p style="font-size:18px; margin: 5px 0 0 -5px;">' + number + '</p>' + symbol);
 		var element = $.get( "/elements/" + number, function(e) {
   		$( ".chemical_data" ).html(e);
